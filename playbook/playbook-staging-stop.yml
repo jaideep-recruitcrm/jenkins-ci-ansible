@@ -1,0 +1,14 @@
+- hosts: tag_type_staging
+  become: yes
+  remote_user: ec2-user
+  tasks:
+    - name: Delete laravel container
+      docker_container:
+        name: laravel
+        force_kill: true
+        keep_volumes: false
+        state: absent
+    - name: Remove image
+      docker_image:
+        state: absent
+        name: 309853523083.dkr.ecr.ap-south-1.amazonaws.com/jenkins-ci 
