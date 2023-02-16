@@ -1,8 +1,8 @@
 # aws ec2 ansible dynamic inventory plugin
 plugin: aws_ec2
-#set aws_access_key and ***REMOVED***_key.
-aws_access_key: ***REMOVED*** 
-aws_***REMOVED***_key: ***REMOVED*** 
+#set aws_access_key and secret_key.
+aws_access_key: `Your aws_access_key` 
+aws_secret_key: `Your aws_secret_key` 
 # set the regions. 
 regions: 
   - ap-south-1
